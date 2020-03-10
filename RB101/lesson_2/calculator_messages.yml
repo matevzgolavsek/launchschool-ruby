@@ -1,0 +1,7 @@
+en:
+  welcome: "Welcome to Calculator! Enter your name:"
+  valid_name: "Make sure to enter a valid name."
+
+sl: 
+  welcome: "Slovensko - Welcome to Calculator! Enter your name:"
+  valid_name: "Slovensko - Make sure to enter a valid name."
