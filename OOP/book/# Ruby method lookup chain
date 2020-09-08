@@ -1,0 +1,30 @@
+# Ruby method lookup chain
+
+When calling a Ruby method we may not realize there is a lot of stuff happening in the back. One of the most important things is where the method is decleared and how it behave. We call this the method lookup.
+
+
+## Ancestors chain
+
+Method lookup goes through the ancestor chain of an object to find where method is decleared.
+
+Let's start with one of the Ruby built in methods `ancestors` which we call on any class to find out the method lookup chain. With calling this method we will get a list of all superclasses and modules that are included in.
+
+```
+module Walk
+  def Walk(sound)
+    puts "#{sound}"
+  end
+end
+
+class Animal
+  include Walk
+end
+
+class Dog < Animal
+  def speak
+    "Woof Woof!"
+  end
+end
+
+puts Dog.ancestors
+```
