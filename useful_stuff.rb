@@ -111,3 +111,42 @@ arr[2] << "d" # ["a", "b", "cd"]
 # binding.pry is scoped based.. so withing method you will have access to variables
 # but not global that werent assigned yet
 # inside pry console we can do method whereami X (x = lines of code up and down) to show 
+
+
+# Fetch vs [X]
+hsh = {
+  a: 1
+}
+
+hsh['a'] # => nil
+hsh.fetch('a') # => key not found
+# so better to use fetch vs first option
+
+hsh.fetch(:a) # => 1
+
+
+# select returns a new array based on the block's return value. If the return value evaluates
+# to true, then the element is selected.
+
+num_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+odds = num_arr.select do |n|
+  n + 1
+  puts n
+end
+
+
+# map returns a new array based on the block's return value. Each element is
+# transformed based on return value
+
+incremented = arr.map do |n| 
+  n + 1
+end
+
+
+```ruby
+odds = num_arr.select do |n|
+  n + 1
+  puts n
+end
+```
